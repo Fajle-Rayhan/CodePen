@@ -1,0 +1,133 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body {
+  font-family: 'Source Code Pro', monospace;
+  background: #222;
+}
+canvas {
+  display: block;
+  cursor: default;
+}
+.popup__btn {
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  z-index: 9;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.popup__btn svg#circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-dasharray: 190;
+  stroke-dashoffset: 190;
+  stroke-linecap: round;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.popup__btn:hover {
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.popup__btn:hover svg#circle {
+  stroke-dashoffset: 0;
+}
+.popup__btn:before,
+.popup__btn:after {
+  display: block;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.popup__btn:before {
+  content: '</>';
+}
+.popup__btn:after {
+  content: 'X';
+}
+.popup__btn.popup__btn_close {
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
+}
+.popup__btn.popup__btn_close svg#circle {
+  stroke-dashoffset: 0;
+}
+.popup__btn.popup__btn_close:before {
+  margin-top: -60px;
+}
+.popup {
+  overflow: hidden;
+  display: block;
+  position: fixed;
+  z-index: 9;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  margin: auto 10%;
+  border-radius: 3px;
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+          box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup.popup_show {
+  bottom: 120px;
+  opacity: 1;
+  visibility: visible;
+}
+pre,
+pre.prettyprint {
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.3;
+  font-size: 12px;
+  border: 0;
+}
+pre .com,
+pre.prettyprint .com {
+  color: #aaa;
+}
+pre .kwd,
+pre.prettyprint .kwd {
+  color: #4eb5e1;
+}
+pre .pln,
+pre.prettyprint .pln {
+  color: #222;
+}
+pre .pun,
+pre.prettyprint .pun {
+  color: #5ac8aa;
+}
+pre .typ,
+pre.prettyprint .typ {
+  color: #ff4c42;
+}

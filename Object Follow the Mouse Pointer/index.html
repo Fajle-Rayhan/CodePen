@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Snippet #6</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<canvas id="playground"></canvas><span class="popup__btn">
+  <svg id="circle">
+    <circle cx="30" cy="30" r="30" stroke="white" stroke-width="4" fill="transparent"></circle>
+  </svg></span>
+<div class="popup">
+  <pre class="prettyprint">let mouseX, mouseY
+
+let halfWidth  = canvas.width/2
+let halfHeight = canvas.height/2
+
+const amp = 20
+
+const getMousePos = e => {
+  const rect = canvas.getBoundingClientRect()
+
+  mouseX = e.clientX - rect.left
+  mouseY = e.clientY - rect.top
+}
+
+document.body.addEventListener('mousemove', getMousePos, false)
+
+// requestAnimationFrame ->
+const x = halfWidth + ((mouseX - halfWidth) / halfWidth) * amp
+const y = halfHeight + ((mouseY - halfHeight) / halfHeight) * amp</pre>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/stats.js/r11/Stats.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
